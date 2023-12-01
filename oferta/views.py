@@ -1,11 +1,10 @@
 from django.shortcuts import render
-from . models import Oferta
 from rest_framework import viewsets
+from .models import Oferta
 from .serializer import OfertaSerializer
-# Create your views here.
-# def usuariolist(request):
-#     return render(request,'usuariolist.html')
-class OfertaViewSet(viewsets.ModelViewSet):
+
+
+class OfertaSerializer(viewsets.ModelViewSet):
     queryset = Oferta.objects.all()
     serializer_class = OfertaSerializer
     
